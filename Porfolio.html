@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+ul{
+	overflow-x:hidden;;
+	white-space:nowrap;
+	height:2cm;
+	width:100%;
+}
+
+li{
+	display:inline-block;
+}
+
+.f-left{
+	float:left;
+}
+
+.f-right{
+	float:right;
+}
+
+a,a:hover{
+	text-decoration:none;
+}
+
+#top-nav{
+	position:relative;
+	width:100%;
+	height:80px;
+	line-height:80px;
+	border-bottom:1px solid rgb(255 255 255/30%);
+	transition:1.0s;
+}
+
+#top-nav .logo-wrapper{
+	font-size:24px;
+	font-weight:600;
+}
+
+#top-nav .logo-wrapper .logo{
+	color:#BB9383;
+}
+
+.navbar-wrapper li a{
+	color:#BB9383;
+	font-size:14px;
+	font-weight:700;
+	text-transform:uppercase;
+	height:50px;
+	line-heught:50px;
+	padding:0 20px;
+}
+
+.navbar-wrapper li.active a{
+	color:#9A5E47;
+}
+
+#hero-area{
+	position:relative;
+}
+
+#hero-area .hero-cover{
+	background-image:url("minimalist beige desktop wallpaper.jpg");
+	background-size:cover;
+	background-attachment:fixed;
+	background-position:center center;
+	height:100vh;
+}
+
+#hero-area .hero-cover .hero-content-box{
+	position:absolute;
+	top:40%;
+	left:0;
+	right:0;
+	text-align:center;
+	transform:translateY(-40%);
+	color:white;
+}
+
+#hero-area .hero-cover .hero-content-box .hello{
+	font-size:30px;
+	font-weight:300;
+}
+
+#hero-area .hero-cover .hero-content-box .post{
+	margin:20px 0 20px 0;
+	font-size:35px;
+}
+
+#hero-area .hero-cover .hero-content-box .hero-desc{
+	font-size:16px;
+	color:white;
+	margin-bottom:60px;
+}
+
+#hero-area .hero-cover .hero-content-box .hero-btns .btn{
+	margin-right:20px;
+	position:relative;
+	z-index:1;
+}
+
+.section{
+	padding:100px 0;
+}
+
+.section-title{
+	text-transform:uppercase;
+	font-size:36px;
+	font-weight:700;
+}
+#biodata .biodata-pic{
+	width:20%;
+	padding:5px;
+	border:1px solid #c6c5c7;
+}
+
+#biodata .biodata-pic img{
+	display:block;
+	max-width:100%;
+}
+
+#biodata .biodata-content{
+	width:60%;
+	margin-top:20px;
+	letter-spacing:1px;
+}
+
+#biodata .biodata-content{
+	color:#90653D;
+}
+
+#biodata .biodata-content .biodata-subtitle{
+	font-size:25px;
+	font-weight:400;
+	margin:20px 0 0 0;
+}
+
+#biodata .biodata-content .biodata-title{
+	font-size:27px;
+	font-weight:400;
+	margin:20px 0 0 0;
+} 
+
+#biodata{
+	background-color:#CFA781;
+	background-size:cover;
+	background-attachment:fixed;
+	background-position:center center;
+	height:100vh;
+}
+
+#biodata .content-box{
+	font-size:16px;
+	color:white;
+	margin-bottom:60px
+}
+
+.clear-fix{
+	content:'';
+	display:table;
+	clear:both;
+}
+
+.text-center{
+	text-align:center;
+}
+
+.white-smoke-color{
+	background-color:#B69D7E;
+}
+
+#experience .experience-content{
+	width:60%;
+	margin-top:20px;
+	letter-spacing:1px;
+}
+
+#experience .experience-content{
+	color:white;
+}
+
+#experience .experience-content .experience-subtitle{
+	font-size:25px;
+	font-weight:400;
+	margin:20px 0 0 0;
+}
+
+#experience .experience-content .experience-title{
+	font-size:27px;
+	font-weight:400;
+	margin:20px 0 0 0;
+}
+
+#experience{
+	background-color:#CBB39C;
+	background-size:cover;
+	background-attachment:fixed;
+	background-position:center center;
+	height:100vh;
+}
+
+#education .education-content{
+	width:60%;
+	margin-top:20px;
+	letter-spacing:1px;
+}
+
+#education .education-content{
+	color:#90653D;
+}
+
+#education .education-content .education-subtitle{
+	font-size:25px;
+	font-weight:400;
+	margin:20px 0 0 0;
+}
+
+#education .education-content .education-title{
+	font-size:27px;
+	font-weight:400;
+	margin:20px 0 0 0;
+}
+
+#education .education-item{
+	text-align:center;
+}
+
+#education{
+	background-color:#CFA781;
+	background-size:cover;
+	background-attachment:fixed;
+	background-position:center center;
+	height:100vh;
+}
+
+#family .family-content{
+	width:60%;
+	margin-top:20px;
+	letter-spacing:1px;
+}
+
+#family .family-content{
+	color:white;
+}
+
+#family .family-content .family-subtitle{
+	font-size:25px;
+	font-weight:400;
+	margin:20px 0 0 0;
+}
+
+#family .family-content .family-title{
+	font-size:27px;
+	font-weight:400;
+	margin:20px 0 0 0;
+}
+
+#family .family-pic{
+	width:20%;
+	padding:5px;
+	border:1px solid #c6c5c7;
+}
+
+#family .family-pic img{
+	display:block;
+	max-width:100%;
+}
+
+#family{
+	background-color:#CBB39C;
+	background-size:cover;
+	background-attachment:fixed;
+	background-position:center center;
+	height:220vh;
+}
+
+#gallery .gallery-content{
+	width:60%;
+	margin-top:20px;
+	letter-spacing:1px;
+}
+
+#gallery .gallery-content{
+	color:#90653D;
+}
+
+#gallery .gallery-content .family-subtitle{
+	font-size:25px;
+	font-weight:400;
+	margin:20px 0 0 0;
+}
+
+#gallery .gallery-content .family-title{
+	font-size:27px;
+	font-weight:400;
+	margin:20px 0 0 0;
+}
+
+#gallery{
+	background-color:#CFA781;
+	background-size:cover;
+	background-attachment:fixed;
+	background-position:center center;
+	height:150vh;
+}
+
+#playlist .playlist-content{
+	width:60%;
+	margin-top:20px;
+	letter-spacing:1px;
+}
+
+#playlist .playlist-content{
+	color:white;
+}
+
+#playlist .playlist-content .playlist-subtitle{
+	font-size:25px;
+	font-weight:400;
+	margin:20px 0 0 0;
+}
+
+#playlist .playlist-content .playlist-title{
+	font-size:27px;
+	font-weight:400;
+	margin:20px 0 0 0;
+}
+
+#playlist{
+	background-color:#CBB39C;
+	background-size:cover;
+	background-attachment:fixed;
+	background-position:center center;
+	height:60vh;
+}
+
+#contact .contact-content{
+	width:60%;
+	margin-top:20px;
+	letter-spacing:1px;
+}
+
+#contact .contact-content{
+	color:white;
+}
+
+#contact .contact-content .contact-subtitle{
+	font-size:25px;
+	font-weight:400;
+	margin:20px 0 0 0;
+}
+
+#contact .contact-content .contact-title{
+	font-size:27px;
+	font-weight:400;
+	margin:20px 0 0 0;
+}
+
+#contact{
+	background-image:url("minimalist beige desktop wallpaper.jpg");
+	background-size:cover;
+	background-attachment:fixed;
+	background-position:center center;
+	height:25vh;
+}
+
+.container{
+	max-width:1200px;
+	margin:auto;
+	bckground:#f2f2f2;
+	overflow:auto;
+}
+
+.column{
+	float:left;
+	width:33.33%;
+	padding:5px;
+{
+
+.row.after{
+	content:"";
+	display:table;
+	clear:both;
+}
+
+img{
+	width:100%;
+	height:90%;
+	float:center;
+}
+
+table{
+	background-color:white;
+	width:60%;	
+}
+
+td{
+	float:left;
+	padding:25px;
+}
+
+#gallery .gallery-item{
+	float:center;
+}
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Personal Portfolio</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</style>
+</head>
+<body>
+	<header>
+		<nav id="top-nav">
+			<div class="container">
+				<div class="logo-wrapper f-left">
+					<a href="#" class="logo">PORTFOLIO</a>
+				</div>
+				<div class="navbar-wrapper f-right">		
+					<ul class="navbar-list">
+						<li class="active"><a href="#homepage" class="link-item">Home Page</a></li>
+						<li><a href="#biodata" class="link-item">Biodata</a></li>
+						<li><a href="#experience" class="link-item">Experience</a></li>
+						<li><a href="#education" class="link-item">Education</a></li>
+						<li><a href="#family" class="link-item">Family</a></li>
+						<li><a href="#gallery" class="link-item">Gallery</a></li>
+						<li><a href="#playlist" class="link-item">Playlist</a></li>
+						<li><a href="#contact" class="link-item">Contact</a></li>
+					</ul>
+				</div>	
+			 </div>	
+		</nav>
+	</header>
+	<section id="hero-area">
+		<div class="hero-cover">
+			<div class="hero-content-box text-center">
+				<h4 class="hello">HELLO EVERYONE</h4>
+				<h1 class="post">WELCOME TO MY WEBSITE</h1>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="section" id="biodata">
+		<div classs=biodata-content align=center>
+		<div class="biodata-content center">
+			<h1 class="biodata-title"><b>BIODATA</b></h1>
+		</div>
+			</div>
+			<div class="biodata-content"></div>
+		</div>
+		<div class=container align=center>
+		<div class="container">
+			<div class="biodata-pic center">
+				<img src="syaff.jpg.jpg">
+			</div>
+
+<br></br>
+<table border=1 align=center cellspacing=1 width=60%>
+<tr>
+<td><font-size=40>NAME</font></td>
+<td>Nur Syafiqah Abdul Malik</td>
+</tr>
+<td>STUDENT ID</td>
+<td>2022764847</td>
+</tr>
+<td>GROUP</td>
+<td>BA2423A</td>
+</tr>
+<td>COURSE</td>
+<td>IMS456 - Basic Web Design and Content Management</td>
+</tr>
+<td>DATE OF BIRTH</td>
+<td>30/10/2000</td>
+</tr>
+<td>ADDRESS</td>
+<td>Lot 5389, Lorong Warisan 1E, Kpg Warisan Jepak Fasa 1, 97000 Bintulu, Sarawak.</td>
+</tr>
+<td>GENDER</td>
+<td>Female</td>
+</tr>
+<td>RACE</td>
+<td>Melanau</td>
+</tr>
+<td>MARITAL STATUS</td>
+<td>Single</td>
+</tr>
+<td>AGE</td>
+<td>23 years old</td>
+</tr>
+<td>SUBMISSION DATE</td>
+<td>3/1/2023</td>
+</tr>
+<td>PREPARED FOR</td>
+<td>T.S Dr.Mohd Rafiz</td>
+</tr>
+</td>
+</table>
+		
+			</div>
+			<div class="clear-fix"></div>
+		</div>
+	</section>
+	<section class="section" id="experience">
+		<div classs=experience-content align=center>
+		<div class="experience-content center">
+			<h1 class="experience-title"><b>EXPERIENCE</b></h1>
+		</div>
+			</div>
+			<div class="experience-content"></div>
+		</div>
+		<div class="experience-wrapper">
+			<div class=experience-item align=center>
+			<div class="experience-item">
+				<h1 class="item-title">Retail Assistant</h1>
+				<h4 class="item-desc">Skechers Bintulu, 1 December 2021 - 30 February 2021</h4>
+<dl>
+<dd>- Greet customers to make them feel welcome</li>
+<dd>- Restock items that are running low and maintain proper display appearances</li>
+<dd>- Handle customer complaints and find the solution</li>
+<dd>- Ensure customers are well-informed on any current sales and store return policy</li>
+<dd>- Maintain a clean, organized and comfortable</li>
+</dl>
+
+			<div class="experience-item">
+				<h1 class="item-title">Online Seller</h1>
+				<h4 class="item-desc">Hijab, August 2020 - Dec 2020</h4>
+<dl>
+<dd>- Have a good communication with customers</li>
+<dd>- Always have a new ideas to market the product in social media</li>
+<dd>- Need to know how to handle customer complaints</li>
+<dd>- Reduced the time required to respond to the customer's request and improve customer's satisfaction</li>
+<dd>- Maintain the products in good quality</li>
+</dl>
+
+			<div class="experience-item">
+				<h1 class="item-title">Waitress</h1>
+				<h4 class="item-desc">Restaurant An-Najjah, November 2017 - December 2017</h4>
+<dl>
+<dd>- Provide a perfect service experience for a restaurant
+<dd>- Ensuring a clean places and friendly environment in the restaurant
+<dd>- Listen to any complaints that patrons have and address them appropriately
+<dd>- Present menu, answer any question from cutomers, and make menu recommendations
+<dd>- Coordinate with kitchen staff to deliver accurate food orders
+</dl>
+
+			</div>
+			<div class="clear-fix"></div>
+		</div>
+	</section>
+	<section class="section" id="education">
+		<div classs=education-content align=center>
+		<div class="education-content center">
+			<h1 class="education-title"><b>EDUCATION</b></h1>
+		</div>
+			<div class="education-content"></div>
+		</div>
+		<div class="education-item">
+				<h1 class="item-title">UPSR</h1>
+				<h4 class="item-desc">SK Asyakirin Bintulu, Sarawak</h4>
+<dl>
+<dd>2007 - 2012</li>
+<dd>Standard 1 - Standard 6</li>
+</dl>
+		<div class="education-item">
+				<h1 class="item-title">PT3</h1>
+				<h4 class="item-desc">SMK Bintulu, Bintulu</h4>
+<dl>
+<dd>2013 - 2015</li>
+<dd>Form 1 - Form 3</li>
+</dl>
+
+		<div class="education-item">
+				<h1 class="item-title">SPM</h1>
+				<h4 class="item-desc">SMK Bintulu, Bintulu</h4>
+<dl>
+<dd>2016 - 2017</li>
+<dd>Form 4 - Form 5</li>
+</dl>
+		
+		<div class="education-item">
+				<h1 class="item-title">Diploma in Business Studies</h1>
+				<h4 class="item-desc">UiTM Cawangan Kampus Mukah, Sarawak</h4>
+<dl>
+<dd>2018 - 2021</li>
+<dd>CGPA : 3.13</li>
+</dl>
+		
+			</div>
+			<div class="clear-fix"></div>
+		</div>
+	</section>
+	<section class="section" id="family">
+		<div classs=family-content align=center>
+		<div class="family-content center">
+			<h1 class="family-title"><b>FAMILY</b></h1>
+		</div>
+			<div class="family-content"></div>
+		</div>
+		<br></br>
+		<div class=container align=center>
+		<div class="container">
+			<div class="family-pic center">
+				<img src="family.jpg">
+			</div>
+		<br></br>
+		<img src="parents.jpg" alt="parents.jpg" height=10% width=20% img align=left>
+		<br></br>
+		<br></br>
+		<div style="display:block;text-align:middle"><a href="#" class="image" border="2"></a><b>FATHER</b><br><br> Name: Abdul Malik bin Bolhi<br> Age : 48 years old<br> Occupation : Fire Technician Malaysia LNG <br><br><br> <b>MOTHER</b> <br><br> Name : Marini binti Yussof <br>Age : 44 years old <br> Occupation : Housewife
+		</div>
+		<br></br>
+		<br></br>
+		<img src="ikhwan.jpg" alt="ikhwan.jpg" height=5% width=20% img align=right>
+		<br></br>
+		<br></br>
+		<br></br>
+		<div style="display:block;text-align:middle"><a href="#" class="image" border="2"></a><b>SIBLINGS</b><br><br> Name: Khairul Ikhwan bin Abdul Malik<br> Age : 21 years old<br> School : UiTM Cawangan Kampus Samarahan 2<br> Course : Diploma Kemahiran Pengurusan Mutawwif Umrah dan Ziarah
+		<br></br>
+		<br></br>
+		<br></br>
+		<img src="haziq.jpg" alt="haziq.jpg" height=5% width=20% img align=left>
+		<br></br>
+		<br></br>
+		<br></br>
+		<div style="display:block;text-align:middle"><a href="#" class="image" border="2"></a> Name: Muhammad Haziq bin Abdul Malik<br> Age : 17 years old<br> School : SMK Agama Miri, Miri<br> 
+		</div>
+		<div class="clear-fix"></div>
+		</div>
+	</section>
+	<section class="section" id="gallery">
+		<div classs=gallery-content align=center>
+		<div class="gallery-content center">
+			<h1 class="gallery-title"><b>GALLERY</b></h1>
+		</div>
+			<div class="gallery-content"></div>
+		</div>
+		<br></br>
+		<div class=gallery-item align=center>
+		<table align="center">
+				<a href="big family.jpg" target="_blank"><img src="big family.jpg" width=30%></a></td>
+				<a href="foster family.jpg" target="_blank"><img src="foster family.jpg" width=30%></a></td>
+				<a href="IMG_8210.jpg" target="_blank"><img src="IMG_8210.jpg" width=30%></a></td>
+			<br></br>
+				<a href="IMG_6183.jpg" target="_blank"><img src="IMG_6183.jpg" width=30%></a></td>
+				<a href="friends.jpg" target="_blank"><img src="friends.jpg" width=30%></a></td>
+				<a href="IMG_5967.jpg" target="_blank"><img src="IMG_5967.jpg" width=30%></a></td>
+			<br></br>
+				<a href="labu.jpg" target="_blank"><img src="labu.jpg" width=20%></a></td>
+				<a href="o'oo.jpg" target="_blank"><img src="o'oo.jpg" width=20%></a></td>
+				<a href="puteri.jpg" target="_blank"><img src="puteri.jpg" width=20%></a></td>
+			</tr>
+		</table>
+			</div>
+			<div class="clear-fix"></div>
+			</div>
+	</section>
+	<section class="section" id="playlist">
+		<div classs=playlist-content align=center>
+		<div class="playlist-content center">
+			<h1 class="playlist-title"><b>PLAYLIST</b></h1>
+		</div>
+			<div class="playlist-content"></div>
+		</div>
+		<br></br>
+		<div class="container">
+		<div class="playlist">
+			<center><h1>TAYLOR SWIFT - ENCHANTED<h1></center>
+			<center><embed src="Taylor Swift - Enchanted (Lyrics).mp3"></center>
+		</div>
+	</section>
+	<div class="clear-fix"></div>
+		</div>
+	</section>
+	<section class="section" id="contact">
+		<div classs=contact-content align=center>
+		<div class="contact-content center">
+			<h1 class="contact-title"><b>CONTACT</b></h1>
+		</div>
+			<div class="contact-content"></div>
+		</div>
+		<div class="contact">
+		<dl>
+		<center><dd>EMAIL   : nsyaff30@gmail.com</li></center>
+		<br></br>
+		<center><dd>PHONE   : 0198685400</li></center>
+		<br></br>
+		<center><dd>ADDRESS : Lot 5389, Lorong Warisan 1E, Kpg Warisan Jepak, 97000 Bintulu, Sarawak.</li></center>
+		</dl>
+		</div>
+		<marquee bg-color=#AF601A direction=right behavior=alternate scrollamount=10>THANK YOU</marquee>
+	</section>
+</body>
+</html>
